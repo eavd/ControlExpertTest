@@ -1,0 +1,9 @@
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\bin\Debug\netcoreapp2.1\Models.deps.json
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\bin\Debug\netcoreapp2.1\Models.dll
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\bin\Debug\netcoreapp2.1\Models.pdb
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\obj\Debug\netcoreapp2.1\Models.csprojAssemblyReference.cache
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\obj\Debug\netcoreapp2.1\Models.csproj.CoreCompileInputs.cache
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\obj\Debug\netcoreapp2.1\Models.AssemblyInfoInputs.cache
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\obj\Debug\netcoreapp2.1\Models.AssemblyInfo.cs
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\obj\Debug\netcoreapp2.1\Models.dll
+C:\Users\edvil\Projects\1.MYPROJECTS\ControlExpertTest\Models\obj\Debug\netcoreapp2.1\Models.pdb

@@ -1,0 +1,63 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Business/1.0.0": {
+        "dependencies": {
+          "DTO": "1.0.0",
+          "Services": "1.0.0"
+        },
+        "runtime": {
+          "Business.dll": {}
+        }
+      },
+      "DTO/1.0.0": {
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "runtime": {
+          "DTO.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "runtime": {
+          "Models.dll": {}
+        }
+      },
+      "Services/1.0.0": {
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "runtime": {
+          "Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
