@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Models
+﻿namespace Models
 {
     public class Weather
     {
 
         /// <summary>
-        /// Property name of the Track
+        /// Property Id of the Weather
         /// </summary>
         public int Id { get; set; }
 
         /// <summary>
-        /// Property name of the Track
+        /// Property name of the Weather
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Property name of the Track
+        /// Property Cod of the Weather
         /// </summary>
         public int Cod { get; set; }
 
         /// <summary>
-        /// Property name of the Track
+        /// Property Main of the Weather
         /// </summary>
         public virtual WeatherMain Main { get; set; }
 

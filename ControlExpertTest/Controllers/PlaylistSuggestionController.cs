@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Business;
+﻿using Business;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
 
 namespace ControlExpertTest.Controllers
 {
@@ -19,42 +17,28 @@ namespace ControlExpertTest.Controllers
             _weatherBusiness = weatherBusiness;
         }
 
-        // Obtener clima, deberia recibir en parametros la ciudad o la latitud y la longitud
-        // Si recibo la ciudad le doy mas importancia a ella
-        // Sino recibo la ciudad debo recibir la latitud y la longiud 
-        // Si alguno de stos datos falta devuelvo un badrequest
-
-        // GET api/playlistsuggestion
+        /// <summary>
+        /// Action that gets a playlist depending on the weather of the given location
+        /// </summary>
+        /// <param name="location">Name of the city</param>
+        /// <param name="latitude">Latitute of the location</param>
+        /// <param name="longitude">Longitude of the location</param>
+        /// <returns>Playlist suggestion (only track name) according to the current temperature of the given location</returns>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get([FromQuery(Name = "loc")] string location,
+            [FromQuery(Name = "lat")] string latitude,
+            [FromQuery(Name = "lon")] string longitude)
         {
-            // return Ok(new string[] { "value1", "value2" });
-            return Ok(_weatherBusiness.GetListTrackByTemperture());
+            try
+            {
+                return Ok(await _weatherBusiness.GetListTrackByTemperature(location, latitude, longitude));
+            }
+            catch (NullReferenceException e)
+            {
+                return BadRequest(e.Message);
+            }
+            
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
-        {
-            return Ok("value");
-        }
-
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

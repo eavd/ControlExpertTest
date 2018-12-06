@@ -1,12 +1,17 @@
-﻿using System;
+﻿using Models;
 using System.Collections.Generic;
-using System.Text;
+using System.Threading.Tasks;
 
 namespace Services
 {
     public interface ITrackService
     {
-        // POST Autorizar las credenciales creadas en base64 "Basic MjcxNzk2YjI5ZmM0NDQ5MmJhZDI2ZDM3OGU2YTY2ZmQ6ZTZjNDQyZDk0MjJlNDVjMjk0MzczYmZlYjRlYzg2YmQ="
-        // GET Obtener lista de reproduccion recomendada por genero
+        /// <summary>
+        /// Method that returns a list of songs with a specific genre depending on the temperature
+        /// </summary>
+        /// <param name="temperature">Temperture in celcius to select the genre of the tracks</param>
+        /// <returns>List of Track entity</returns>
+        Task<IEnumerable<Track>> GetRecommendationList(double temperature);
+
     }
 }

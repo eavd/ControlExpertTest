@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Services;
+using Services.Utils;
 
 namespace ControlExpertTest
 {
@@ -25,6 +26,7 @@ namespace ControlExpertTest
             services.AddTransient<ITrackService, TrackService>();
             services.AddTransient<IWeatherBusiness, WeatherBusiness>();
             services.AddTransient<IWeatherService, WeatherService>();
+            services.AddTransient<HttpRequestUtil>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
