@@ -23,6 +23,8 @@ namespace ControlExpertTest
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.AddCors();
+
             services.AddTransient<ITrackService, TrackService>();
             services.AddTransient<IWeatherBusiness, WeatherBusiness>();
             services.AddTransient<IWeatherService, WeatherService>();
@@ -42,7 +44,7 @@ namespace ControlExpertTest
             }
 
             // app.UseHttpsRedirection();
-
+            app.UseCors(cors => cors.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc();
         }
     }
